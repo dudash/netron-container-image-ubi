@@ -9,7 +9,7 @@ Get it using CLI (`podman` or `docker`):
    `podman pull quay.io/jasonredhat/netron`
    
 Run locally with CLI:
-    `podman run -p 127.0.0.1:80:8080/tcp quay.io/jasonredhat/netron:latest`
+    `podman run -p 8080:8080 quay.io/jasonredhat/netron:latest`
 
 Run it on an OpenShift cluster:
    `oc new-app quay.io/jasonredhat/netron`
