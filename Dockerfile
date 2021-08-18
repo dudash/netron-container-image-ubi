@@ -6,5 +6,5 @@ RUN chown -R 1001:0 /tmp/src
 USER 1001
 
 RUN /usr/libexec/s2i/assemble
-ENV NPM_RUN = npm run server
+ENV NPM_RUN npm run server
 CMD /usr/libexec/s2i/run
