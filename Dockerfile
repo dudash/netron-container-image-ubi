@@ -11,5 +11,10 @@ RUN chown -R 1001:0 /usr/libexec/s2i/node
 USER 1001
 
 RUN /usr/libexec/s2i/node/assemble
-ENV NPM_RUN npm run server
-CMD /usr/libexec/s2i/node/run
+RUN python setup.py build
+
+# ENV NPM_RUN npm run server
+# CMD /usr/libexec/s2i/node/run
+
+ENV PYTHONPATH dist/lib:${PYTHONPATH}
+CMD python -c "import netron; netron.start()"
