@@ -19,7 +19,7 @@ jobs:
     - name: git checkout netron code
       uses: actions/checkout@v2
       with:
-        repository: lutzroeder/netron
+        repository: dudash/netron
         path: ./app-src
 
     - name: Set up Docker Buildx
